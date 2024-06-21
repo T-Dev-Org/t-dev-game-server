@@ -46,6 +46,7 @@ io.on("connection", (socket) => {
    */
   socket.on("player-moving", (transforms) => {
     socket.broadcast.emit("player-moving", transforms);
+    console.log("Broadcasting player-moving to all players");
   });
 
   /**
